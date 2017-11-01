@@ -16,5 +16,5 @@ SOLUTION: add `http://` to `localhost:3000`
 - jquery ajax success not showing data
 - jquery ajax failed to load response data
 - jquery ajax jsonp tutorial
-- ajax jsonp VM1678:1 Uncaught SyntaxError: Unexpected token :
+- ajax jsonp `VM1678:1 Uncaught SyntaxError: Unexpected token :`
 
