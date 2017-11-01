@@ -1,0 +1,47 @@
+<html>
+  <head>
+  </head>
+  <body>
+    <h1>Hacktivator Calculator</h1>
+    <form id='add-form'>
+      <input type="number" id='number-1'>
+      <button id='add'>+</button>
+      <button id='sub'>-</button>
+      <button id='mult'>X</button>
+      <button id='div'>/</button>
+      <input type="number" id='number-2'>
+      <span id='answer'> = </span>
+    </form>
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>  
+  <script>
+    $(document).ready(function() {
+
+      const calculate = function(operation) {
+        let num1 = $('#number-1').val();
+        let num2 = $('#number-2').val();
+        $.post('http://localhost:3000/calc', {"operation": operation, "num1": num1, "num2": num2}, function(data) {
+          $('#answer').html(' = ' + data.total);
+        })
+      }
+      
+      $('#add').click(function(e) {
+        e.preventDefault();
+        calculate("add");
+      })
+      $('#sub').click(function(e) {
+        e.preventDefault();
+        calculate("sub");
+      })
+      $('#mult').click(function(e) {
+        e.preventDefault();
+        calculate("mult");
+      })
+      $('#div').click(function(e) {
+        e.preventDefault();
+        calculate("div");
+      })
+      
+    });
+  </script>
+</html>

@@ -1,0 +1,28 @@
+{
+  "name": "hr_calculator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stevenjchang/hr_calculator.git"
+  },
+  "keywords": [
+    "calc"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stevenjchang/hr_calculator/issues"
+  },
+  "homepage": "https://github.com/stevenjchang/hr_calculator#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "node": "^8.3.0",
+    "path": "^0.12.7"
+  }
+}
